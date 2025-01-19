@@ -16,5 +16,10 @@ namespace ChampionsDeck
         {
             InitializeComponent();
         }
+
+        private void changePasswordBtn_Click(object sender, EventArgs e)
+        {
+            //This is github desktop
+        }
     }
 }

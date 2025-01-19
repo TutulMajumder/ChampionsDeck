@@ -52,6 +52,7 @@ namespace ChampionsDeck
             this.changePasswordBtn.Size = new System.Drawing.Size(402, 61);
             this.changePasswordBtn.TabIndex = 25;
             this.changePasswordBtn.Text = "Submit";
+            this.changePasswordBtn.Click += new System.EventHandler(this.changePasswordBtn_Click);
             // 
             // RePasswordTBox
             // 
