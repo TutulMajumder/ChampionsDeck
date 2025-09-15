@@ -177,11 +177,6 @@ Explore the core features and workflows of Champions Deck through the following 
 
 ---
 
-## License
-
-Champions Deck is released under the MIT License.
-
----
 
 ## Contact
 
