@@ -65,50 +65,83 @@ The schema includes tables for users, admins, game managers, tournament managers
 
 ## Screenshots
 
-## Screenshots
-
-Explore the core features and workflows of Champions Deck through the following screenshots:
+Explore the core features and workflows of Champions Deck through the following screenshots. Each image is accompanied by a brief description to illustrate its purpose and functionality within the application.
 
 ### Authentication & Onboarding
+
 - **Login:**  
-    ![Login Screen](image.png)
+  The login screen provides secure access for all user roles, ensuring only authorized users can enter the system.  
+  ![Login Screen](screenshots/image.png)
+
 - **Registration:**  
-    ![Registration Screen](image-1.png)
+  The registration form allows new viewers to sign up by entering their details, selecting a preferred game, and agreeing to terms and conditions.  
+  ![Registration Screen](screenshots/image-1.png)
+
 - **Email Verification:**  
-    ![Email Verification](image-4.png)
+  After registration, viewers verify their email to activate their account, enhancing security and authenticity.  
+  ![Email Verification](screenshots/image-4.png)
+
 - **Change Password:**  
-    ![Email Verification Step 1](image-3.png)  
-    ![Email Verification Step 2](image-2.png)  
-    ![Verification Success](image-5.png)
+  Users can initiate a password change process, including email verification and OTP confirmation for secure password updates.  
+  ![Email Verification Step 1](screenshots/image-3.png)  
+  ![Email Verification Step 2](screenshots/image-2.png)  
+  ![Verification Success](screenshots/image-5.png)
+
+---
 
 ### Tournament Experience
+
 - **Browse Tournaments:**  
-    ![Tournament List](image-6.png)
+  Viewers can explore ongoing and upcoming tournaments, viewing details and schedules in a user-friendly interface.  
+  ![Tournament List](screenshots/image-6.png)
+
 - **Propose & Approve Tournaments:**  
-    ![Propose Tournament](image-8.png)  
-    ![Approve Tournament](image-9.png)
+  Tournament Managers can propose new tournaments, which are then reviewed and approved by Admins to ensure quality and compliance.  
+  ![Propose Tournament](screenshots/image-8.png)  
+  ![Approve Tournament](screenshots/image-9.png)
+
+---
 
 ### Management Dashboards
+
 - **Game Management:**  
-    ![Game Management](image-7.png)
+  Game Managers can add, update, or remove games available for tournaments, maintaining an up-to-date game roster.  
+  ![Game Management](screenshots/image-7.png)
+
 - **Team Management:**  
-    ![Team Management](image-10.png)
+  Tournament Managers handle team registrations and details, ensuring teams are properly organized for events.  
+  ![Team Management](screenshots/image-10.png)
+
 - **Match Scheduling & Score Updates:**  
-    ![Match Scheduling](image-11.png)
+  Schedule matches and update scorecards to reflect real-time results and progression throughout the tournament.  
+  ![Match Scheduling](screenshots/image-11.png)
+
+---
 
 ### Administration
-- **Admin Overview:**  
-    ![Admin Overview](image-12.png)
-- **User Management:**  
-    ![User Management](image-13.png)
-- **Tournament Approval:**  
-    ![Tournament Approval](image-14.png)
-- **System Settings:**  
-    ![System Settings](image-15.png)
-- **Audit Logs:**  
-    ![Audit Logs](image-16.png)
 
-*Note: Screenshots are for demonstration purposes and may differ from the final application UI.*
+- **Admin Overview:**  
+  The admin dashboard provides a comprehensive overview of system activity and user management.  
+  ![Admin Overview](screenshots/image-12.png)
+
+- **User Management:**  
+  Admins can manage user accounts, assign roles, and oversee permissions for all participants.  
+  ![User Management](screenshots/image-13.png)
+
+- **Tournament Approval:**  
+  Admins review and approve tournament proposals submitted by Tournament Managers.  
+  ![Tournament Approval](screenshots/image-14.png)
+
+- **System Settings:**  
+  Configure system-wide settings to tailor the application to organizational needs.  
+  ![System Settings](screenshots/image-15.png)
+
+- **Audit Logs:**  
+  Track system activity and changes for transparency and accountability.  
+  ![Audit Logs](screenshots/image-16.png)
+
+---
+
 
 ## Prerequisites
 
