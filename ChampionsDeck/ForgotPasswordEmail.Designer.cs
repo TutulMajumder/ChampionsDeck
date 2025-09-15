@@ -30,7 +30,8 @@ namespace ChampionsDeck
         private void InitializeComponent()
         {
             this.LoginBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.usernameTBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.emailTBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoginBtn
@@ -46,31 +47,46 @@ namespace ChampionsDeck
             this.LoginBtn.Font = new System.Drawing.Font("Lucida Bright", 10.2F, System.Drawing.FontStyle.Bold);
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
             this.LoginBtn.IndicateFocus = true;
-            this.LoginBtn.Location = new System.Drawing.Point(436, 330);
+            this.LoginBtn.Location = new System.Drawing.Point(515, 314);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(359, 51);
             this.LoginBtn.TabIndex = 24;
             this.LoginBtn.Text = "Send";
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
-            // usernameTBox
+            // emailTBox
             // 
-            this.usernameTBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.usernameTBox.DefaultText = "";
-            this.usernameTBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.usernameTBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.usernameTBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.usernameTBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.usernameTBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.usernameTBox.Font = new System.Drawing.Font("Lucida Bright", 12F);
-            this.usernameTBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.usernameTBox.Location = new System.Drawing.Point(400, 270);
-            this.usernameTBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.usernameTBox.Name = "usernameTBox";
-            this.usernameTBox.PasswordChar = '\0';
-            this.usernameTBox.PlaceholderText = "Enter your email";
-            this.usernameTBox.SelectedText = "";
-            this.usernameTBox.Size = new System.Drawing.Size(439, 39);
-            this.usernameTBox.TabIndex = 23;
+            this.emailTBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.emailTBox.DefaultText = "";
+            this.emailTBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.emailTBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.emailTBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.emailTBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.emailTBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.emailTBox.Font = new System.Drawing.Font("Lucida Bright", 12F);
+            this.emailTBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.emailTBox.Location = new System.Drawing.Point(479, 254);
+            this.emailTBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.emailTBox.Name = "emailTBox";
+            this.emailTBox.PasswordChar = '\0';
+            this.emailTBox.PlaceholderText = "Enter your email";
+            this.emailTBox.SelectedText = "";
+            this.emailTBox.Size = new System.Drawing.Size(439, 39);
+            this.emailTBox.TabIndex = 23;
+            // 
+            // backBtn
+            // 
+            this.backBtn.BackColor = System.Drawing.Color.Navy;
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.ForeColor = System.Drawing.Color.White;
+            this.backBtn.Location = new System.Drawing.Point(1230, 12);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(140, 50);
+            this.backBtn.TabIndex = 129;
+            this.backBtn.Text = "back";
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // ForgotPasswordEmail
             // 
@@ -78,9 +94,12 @@ namespace ChampionsDeck
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1382, 703);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.LoginBtn);
-            this.Controls.Add(this.usernameTBox);
+            this.Controls.Add(this.emailTBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ForgotPasswordEmail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgotPasswordEmail";
             this.ResumeLayout(false);
 
@@ -89,6 +108,7 @@ namespace ChampionsDeck
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button LoginBtn;
-        private Guna.UI2.WinForms.Guna2TextBox usernameTBox;
+        private Guna.UI2.WinForms.Guna2TextBox emailTBox;
+        private System.Windows.Forms.Button backBtn;
     }
 }

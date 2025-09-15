@@ -37,6 +37,7 @@ namespace ChampionsDeck
             this.otpTBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.otpTBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             this.otpTBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // votpButton
@@ -191,12 +192,27 @@ namespace ChampionsDeck
             this.otpTBox4.Size = new System.Drawing.Size(81, 54);
             this.otpTBox4.TabIndex = 26;
             // 
+            // CancelBtn
+            // 
+            this.CancelBtn.BackColor = System.Drawing.Color.Navy;
+            this.CancelBtn.FlatAppearance.BorderSize = 0;
+            this.CancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBtn.ForeColor = System.Drawing.Color.White;
+            this.CancelBtn.Location = new System.Drawing.Point(1230, 12);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(140, 50);
+            this.CancelBtn.TabIndex = 131;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            // 
             // verifyOtp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1382, 703);
+            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.otpTBox6);
             this.Controls.Add(this.otpTBox5);
             this.Controls.Add(this.otpTBox4);
@@ -205,7 +221,7 @@ namespace ChampionsDeck
             this.Controls.Add(this.votpButton);
             this.Controls.Add(this.VOtplbl);
             this.Controls.Add(this.otpTBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "verifyOtp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "verifyOtp";
@@ -225,5 +241,6 @@ namespace ChampionsDeck
         private Guna.UI2.WinForms.Guna2TextBox otpTBox6;
         private Guna.UI2.WinForms.Guna2TextBox otpTBox5;
         private Guna.UI2.WinForms.Guna2TextBox otpTBox4;
+        private System.Windows.Forms.Button CancelBtn;
     }
 }

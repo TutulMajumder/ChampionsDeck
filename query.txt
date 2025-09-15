@@ -1,0 +1,139 @@
+1.	CREATE TABLE [dbo].[Admins](
+	[admin_id] [int] NOT NULL,
+	[user_id] [int] NOT NULL,
+ CONSTRAINT [PK_Admins] PRIMARY KEY CLUSTERED 
+(
+	[admin_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+2.	CREATE TABLE [dbo].[GameManagers](
+	[gamemanager_id] [int] NOT NULL,
+	[user_id] [int] NOT NULL,
+	[admin_id] [int] NOT NULL,
+ CONSTRAINT [PK_GameManagers] PRIMARY KEY CLUSTERED 
+(
+	[gamemanager_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+3.	CREATE TABLE [dbo].[Games](
+	[game_id] [int] NOT NULL,
+	[gamename] [nvarchar](50) NOT NULL,
+	[gameplatform] [nvarchar](50) NOT NULL,
+	[gamemanager_id] [int] NOT NULL,
+	[gameGenre] [nvarchar](50) NOT NULL,
+	[gameStatus] [nvarchar](50) NOT NULL,
+	[game_logo] [varchar](max) NOT NULL,
+ CONSTRAINT [PK_Games] PRIMARY KEY CLUSTERED 
+(
+	[game_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+4.	CREATE TABLE [dbo].[Matches](
+	[match_id] [int] NOT NULL,
+	[tournament_id] [int] NOT NULL,
+	[matchround] [int] NOT NULL,
+	[matchdate] [date] NOT NULL,
+	[teamA_id] [int] NOT NULL,
+	[teamB_id] [int] NOT NULL,
+	[teamA_score] [int] NULL,
+	[teamB_score] [int] NULL,
+	[winningteam_id] [int] NOT NULL,
+	[tournamentmanager_id] [int] NOT NULL,
+ CONSTRAINT [PK_Matches] PRIMARY KEY CLUSTERED 
+(
+	[match_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+
+
+
+5.	CREATE TABLE [dbo].[Players](
+	[player_id] [int] IDENTITY(1,1) NOT NULL,
+	[playername] [nvarchar](50) NOT NULL,
+	[email] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Players] PRIMARY KEY CLUSTERED 
+(
+	[player_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+6.	CREATE TABLE [dbo].[TeamMembers](
+	[teammember_id] [int] NOT NULL,
+	[player_id] [int] NOT NULL,
+	[team_id] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_TeamMembers] PRIMARY KEY CLUSTERED 
+(
+	[teammember_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+7.	CREATE TABLE [dbo].[Teams](
+	[team_id] [int] NOT NULL,
+	[teamname] [nvarchar](50) NOT NULL,
+	[teamlogo] [image] NOT NULL,
+	[tournamentmanager_id] [int] NOT NULL,
+ CONSTRAINT [PK_Teams] PRIMARY KEY CLUSTERED 
+(
+	[team_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+8.	CREATE TABLE [dbo].[TournamentManagers](
+	[tournamentmanager_id] [int] NOT NULL,
+	[user_id] [int] NOT NULL,
+	[admin_id] [int] NOT NULL,
+ CONSTRAINT [PK_TournamentManagers] PRIMARY KEY CLUSTERED 
+(
+	[tournamentmanager_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+9.	CREATE TABLE [dbo].[Tournaments](
+	[tournament_id] [int] NOT NULL,
+	[tournamentname] [nvarchar](50) NOT NULL,
+	[tournamenttype] [nvarchar](50) NOT NULL,
+	[proposalstatus] [nvarchar](50) NOT NULL,
+	[startdate] [date] NOT NULL,
+	[tournamentlogo] [image] NOT NULL,
+	[tournamentmanager_id] [int] NOT NULL,
+	[enddate] [date] NOT NULL,
+	[tournamentstatus] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Tournaments] PRIMARY KEY CLUSTERED 
+(
+	[tournament_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+10.	CREATE TABLE [dbo].[Users](
+	[user_id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [nvarchar](100) NOT NULL,
+	[email] [nvarchar](255) NOT NULL,
+	[password] [nvarchar](255) NOT NULL,
+	[Role] [nvarchar](50) NOT NULL,
+	[status] [nvarchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[user_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+11.	CREATE TABLE [dbo].[Viewers](
+	[viewer_id] [int] IDENTITY(1,1) NOT NULL,
+	[user_id] [int] NOT NULL,
+	[preferredgames] [nvarchar](50) NOT NULL,
+	[country] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Viewers] PRIMARY KEY CLUSTERED 
+(
+	[viewer_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+

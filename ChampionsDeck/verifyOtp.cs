@@ -98,6 +98,7 @@ namespace ChampionsDeck
 
         private void votpButton_Click(object sender, EventArgs e)
         {
+            // Example validation: Check if all text boxes contain exactly one digit
             string otpEntered = string.Join("", GetTextBoxes().Select(tb => tb.Text));
 
             if (otpEntered.Length == 6 && otpEntered.All(char.IsDigit))
@@ -105,21 +106,22 @@ namespace ChampionsDeck
                 // Convert to integer and compare with the expected OTP (if needed)
                 if (otpEntered == generatedOTP)
                 {
-                    MessageBox.Show("OTP Verified Successfully!");
+                    MessageBox.Show("Your OTP has been successfully verified! Proceeding with registration.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Insert into database
                     RegisterUser();
-
-                    this.Close(); // Close the Verify OTP form
+                    Login login = new Login();
+                    login.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect OTP.");
+                    MessageBox.Show("The OTP you entered is incorrect. Please try again.", "OTP Verification Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Please enter a 6-digit OTP.");
+                MessageBox.Show("Invalid OTP! Please ensure you enter all 6 digits.", "Invalid OTP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -133,13 +135,15 @@ namespace ChampionsDeck
                     connection.Open();
 
                     // Insert into Users table
-                    string insertUserQuery = "INSERT INTO Users (username, email, password, Role) VALUES (@UserName, @Email, @Password, 'Viewer');SELECT CAST(SCOPE_IDENTITY() AS INT);";
+                    string insertUserQuery = "INSERT INTO Users (username, email, password, Role,status) VALUES (@UserName, @Email, @Password, 'Viewer',@status);SELECT CAST(SCOPE_IDENTITY() AS INT);";
                     SqlCommand userCommand = new SqlCommand(insertUserQuery, connection);
                     userCommand.Parameters.AddWithValue("@UserName", username);
                     userCommand.Parameters.AddWithValue("@Email", email);
                     userCommand.Parameters.AddWithValue("@Password", password);
-                    
-                    
+                    userCommand.Parameters.AddWithValue("@status", "Active");
+
+
+
                     int userId = Convert.ToInt32(userCommand.ExecuteScalar());
 
                     // Insert into Viewers table
@@ -150,7 +154,7 @@ namespace ChampionsDeck
                     viewerCommand.Parameters.AddWithValue("@Country", country);
                     viewerCommand.ExecuteNonQuery();
 
-                    MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Congratulations! Your account has been successfully created. You can now log in and start using ChampionsDeck.", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (SqlException sqlEx)
@@ -168,6 +172,13 @@ namespace ChampionsDeck
         private void otpTBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }

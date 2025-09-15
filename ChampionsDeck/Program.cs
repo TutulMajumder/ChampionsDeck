@@ -16,7 +16,12 @@ namespace ChampionsDeck
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Admin_Dashboard());
             Application.Run(new Login());
+
+            //Application.Run(new manageMatches());
+            //Application.Run(new GameManagerDashboard());
+            //Application.Run(new addTournament());
         }
     }
 }

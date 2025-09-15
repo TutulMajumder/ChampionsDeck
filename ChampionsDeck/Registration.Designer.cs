@@ -30,16 +30,10 @@ namespace ChampionsDeck
         private void InitializeComponent()
         {
             this.userNameTBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.usernamelbl = new System.Windows.Forms.Label();
             this.signuplbl = new System.Windows.Forms.Label();
-            this.preferredglbl = new System.Windows.Forms.Label();
             this.preferredGamesTBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.emaillbl = new System.Windows.Forms.Label();
             this.emailTBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.countrylbl = new System.Windows.Forms.Label();
-            this.repasswordlbl = new System.Windows.Forms.Label();
             this.RpasswordTBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.passwordlbl = new System.Windows.Forms.Label();
             this.passwordTBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.CreateABtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -63,6 +57,9 @@ namespace ChampionsDeck
             this.SigninBtn = new System.Windows.Forms.Button();
             this.termsConditionsBtn = new System.Windows.Forms.Button();
             this.termsConditionsCBox = new System.Windows.Forms.CheckBox();
+            this.showPassCBox = new System.Windows.Forms.CheckBox();
+            this.showRPassCBox = new System.Windows.Forms.CheckBox();
+            this.countrylbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -95,39 +92,16 @@ namespace ChampionsDeck
             this.userNameTBox.Size = new System.Drawing.Size(318, 39);
             this.userNameTBox.TabIndex = 0;
             // 
-            // usernamelbl
-            // 
-            this.usernamelbl.AutoSize = true;
-            this.usernamelbl.BackColor = System.Drawing.Color.White;
-            this.usernamelbl.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamelbl.ForeColor = System.Drawing.Color.Black;
-            this.usernamelbl.Location = new System.Drawing.Point(645, 123);
-            this.usernamelbl.Name = "usernamelbl";
-            this.usernamelbl.Size = new System.Drawing.Size(115, 23);
-            this.usernamelbl.TabIndex = 1;
-            this.usernamelbl.Text = "User name";
-            // 
             // signuplbl
             // 
             this.signuplbl.AutoSize = true;
             this.signuplbl.BackColor = System.Drawing.Color.White;
             this.signuplbl.Font = new System.Drawing.Font("Lucida Bright", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signuplbl.Location = new System.Drawing.Point(907, 36);
+            this.signuplbl.Location = new System.Drawing.Point(907, 30);
             this.signuplbl.Name = "signuplbl";
             this.signuplbl.Size = new System.Drawing.Size(203, 55);
             this.signuplbl.TabIndex = 2;
             this.signuplbl.Text = "Sign Up";
-            // 
-            // preferredglbl
-            // 
-            this.preferredglbl.AutoSize = true;
-            this.preferredglbl.BackColor = System.Drawing.Color.White;
-            this.preferredglbl.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.preferredglbl.Location = new System.Drawing.Point(1043, 125);
-            this.preferredglbl.Name = "preferredglbl";
-            this.preferredglbl.Size = new System.Drawing.Size(162, 23);
-            this.preferredglbl.TabIndex = 4;
-            this.preferredglbl.Text = "Preferred game";
             // 
             // preferredGamesTBox
             // 
@@ -149,17 +123,6 @@ namespace ChampionsDeck
             this.preferredGamesTBox.Size = new System.Drawing.Size(313, 39);
             this.preferredGamesTBox.TabIndex = 3;
             // 
-            // emaillbl
-            // 
-            this.emaillbl.AutoSize = true;
-            this.emaillbl.BackColor = System.Drawing.Color.White;
-            this.emaillbl.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emaillbl.Location = new System.Drawing.Point(645, 201);
-            this.emaillbl.Name = "emaillbl";
-            this.emaillbl.Size = new System.Drawing.Size(64, 23);
-            this.emaillbl.TabIndex = 6;
-            this.emaillbl.Text = "Email";
-            // 
             // emailTBox
             // 
             this.emailTBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -180,28 +143,6 @@ namespace ChampionsDeck
             this.emailTBox.Size = new System.Drawing.Size(439, 39);
             this.emailTBox.TabIndex = 5;
             // 
-            // countrylbl
-            // 
-            this.countrylbl.AutoSize = true;
-            this.countrylbl.BackColor = System.Drawing.Color.White;
-            this.countrylbl.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countrylbl.Location = new System.Drawing.Point(1121, 201);
-            this.countrylbl.Name = "countrylbl";
-            this.countrylbl.Size = new System.Drawing.Size(90, 23);
-            this.countrylbl.TabIndex = 8;
-            this.countrylbl.Text = "Country";
-            // 
-            // repasswordlbl
-            // 
-            this.repasswordlbl.AutoSize = true;
-            this.repasswordlbl.BackColor = System.Drawing.Color.White;
-            this.repasswordlbl.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repasswordlbl.Location = new System.Drawing.Point(645, 363);
-            this.repasswordlbl.Name = "repasswordlbl";
-            this.repasswordlbl.Size = new System.Drawing.Size(136, 23);
-            this.repasswordlbl.TabIndex = 12;
-            this.repasswordlbl.Text = "Re-Password";
-            // 
             // RpasswordTBox
             // 
             this.RpasswordTBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -219,19 +160,8 @@ namespace ChampionsDeck
             this.RpasswordTBox.PasswordChar = '\0';
             this.RpasswordTBox.PlaceholderText = "Enter your Password again";
             this.RpasswordTBox.SelectedText = "";
-            this.RpasswordTBox.Size = new System.Drawing.Size(387, 39);
+            this.RpasswordTBox.Size = new System.Drawing.Size(354, 39);
             this.RpasswordTBox.TabIndex = 11;
-            // 
-            // passwordlbl
-            // 
-            this.passwordlbl.AutoSize = true;
-            this.passwordlbl.BackColor = System.Drawing.Color.White;
-            this.passwordlbl.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordlbl.Location = new System.Drawing.Point(645, 282);
-            this.passwordlbl.Name = "passwordlbl";
-            this.passwordlbl.Size = new System.Drawing.Size(104, 23);
-            this.passwordlbl.TabIndex = 10;
-            this.passwordlbl.Text = "Password";
             // 
             // passwordTBox
             // 
@@ -250,7 +180,7 @@ namespace ChampionsDeck
             this.passwordTBox.PasswordChar = '\0';
             this.passwordTBox.PlaceholderText = "Enter your Password";
             this.passwordTBox.SelectedText = "";
-            this.passwordTBox.Size = new System.Drawing.Size(387, 39);
+            this.passwordTBox.Size = new System.Drawing.Size(354, 39);
             this.passwordTBox.TabIndex = 9;
             this.passwordTBox.TextChanged += new System.EventHandler(this.passwordTBox_TextChanged);
             // 
@@ -267,7 +197,7 @@ namespace ChampionsDeck
             this.CreateABtn.Font = new System.Drawing.Font("Lucida Bright", 10.2F, System.Drawing.FontStyle.Bold);
             this.CreateABtn.ForeColor = System.Drawing.Color.White;
             this.CreateABtn.IndicateFocus = true;
-            this.CreateABtn.Location = new System.Drawing.Point(786, 512);
+            this.CreateABtn.Location = new System.Drawing.Point(785, 529);
             this.CreateABtn.Name = "CreateABtn";
             this.CreateABtn.Size = new System.Drawing.Size(402, 61);
             this.CreateABtn.TabIndex = 13;
@@ -345,7 +275,7 @@ namespace ChampionsDeck
             this.labelheading.AutoSize = true;
             this.labelheading.BackColor = System.Drawing.Color.White;
             this.labelheading.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelheading.Location = new System.Drawing.Point(1054, 290);
+            this.labelheading.Location = new System.Drawing.Point(1032, 298);
             this.labelheading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelheading.Name = "labelheading";
             this.labelheading.Size = new System.Drawing.Size(210, 19);
@@ -358,7 +288,7 @@ namespace ChampionsDeck
             this.numberlbl.BackColor = System.Drawing.Color.White;
             this.numberlbl.Font = new System.Drawing.Font("Lucida Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberlbl.ForeColor = System.Drawing.Color.Red;
-            this.numberlbl.Location = new System.Drawing.Point(1112, 348);
+            this.numberlbl.Location = new System.Drawing.Point(1089, 356);
             this.numberlbl.Name = "numberlbl";
             this.numberlbl.Size = new System.Drawing.Size(176, 16);
             this.numberlbl.TabIndex = 28;
@@ -371,7 +301,7 @@ namespace ChampionsDeck
             this.uppercaselbl.BackColor = System.Drawing.Color.White;
             this.uppercaselbl.Font = new System.Drawing.Font("Lucida Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uppercaselbl.ForeColor = System.Drawing.Color.Red;
-            this.uppercaselbl.Location = new System.Drawing.Point(1112, 379);
+            this.uppercaselbl.Location = new System.Drawing.Point(1089, 387);
             this.uppercaselbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uppercaselbl.Name = "uppercaselbl";
             this.uppercaselbl.Size = new System.Drawing.Size(195, 16);
@@ -385,7 +315,7 @@ namespace ChampionsDeck
             this.lowercaselbl.BackColor = System.Drawing.Color.White;
             this.lowercaselbl.Font = new System.Drawing.Font("Lucida Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lowercaselbl.ForeColor = System.Drawing.Color.Red;
-            this.lowercaselbl.Location = new System.Drawing.Point(1112, 409);
+            this.lowercaselbl.Location = new System.Drawing.Point(1089, 417);
             this.lowercaselbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lowercaselbl.Name = "lowercaselbl";
             this.lowercaselbl.Size = new System.Drawing.Size(190, 16);
@@ -399,7 +329,7 @@ namespace ChampionsDeck
             this.characterlbl.BackColor = System.Drawing.Color.White;
             this.characterlbl.Font = new System.Drawing.Font("Lucida Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.characterlbl.ForeColor = System.Drawing.Color.Red;
-            this.characterlbl.Location = new System.Drawing.Point(1112, 317);
+            this.characterlbl.Location = new System.Drawing.Point(1089, 325);
             this.characterlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.characterlbl.Name = "characterlbl";
             this.characterlbl.Size = new System.Drawing.Size(203, 16);
@@ -413,7 +343,7 @@ namespace ChampionsDeck
             this.scharacterlbl.BackColor = System.Drawing.Color.White;
             this.scharacterlbl.Font = new System.Drawing.Font("Lucida Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scharacterlbl.ForeColor = System.Drawing.Color.Red;
-            this.scharacterlbl.Location = new System.Drawing.Point(1112, 440);
+            this.scharacterlbl.Location = new System.Drawing.Point(1089, 448);
             this.scharacterlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.scharacterlbl.Name = "scharacterlbl";
             this.scharacterlbl.Size = new System.Drawing.Size(243, 16);
@@ -425,7 +355,7 @@ namespace ChampionsDeck
             this.characterPBox.BackColor = System.Drawing.Color.Transparent;
             this.characterPBox.Image = global::ChampionsDeck.Properties.Resources.No;
             this.characterPBox.ImageRotate = 0F;
-            this.characterPBox.Location = new System.Drawing.Point(1085, 312);
+            this.characterPBox.Location = new System.Drawing.Point(1062, 320);
             this.characterPBox.Name = "characterPBox";
             this.characterPBox.Size = new System.Drawing.Size(25, 25);
             this.characterPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -438,7 +368,7 @@ namespace ChampionsDeck
             this.numberPBox.BackColor = System.Drawing.Color.Transparent;
             this.numberPBox.Image = global::ChampionsDeck.Properties.Resources.No;
             this.numberPBox.ImageRotate = 0F;
-            this.numberPBox.Location = new System.Drawing.Point(1085, 343);
+            this.numberPBox.Location = new System.Drawing.Point(1062, 351);
             this.numberPBox.Name = "numberPBox";
             this.numberPBox.Size = new System.Drawing.Size(25, 25);
             this.numberPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -451,7 +381,7 @@ namespace ChampionsDeck
             this.uppercasePBox.BackColor = System.Drawing.Color.Transparent;
             this.uppercasePBox.Image = global::ChampionsDeck.Properties.Resources.No;
             this.uppercasePBox.ImageRotate = 0F;
-            this.uppercasePBox.Location = new System.Drawing.Point(1085, 374);
+            this.uppercasePBox.Location = new System.Drawing.Point(1062, 382);
             this.uppercasePBox.Name = "uppercasePBox";
             this.uppercasePBox.Size = new System.Drawing.Size(25, 25);
             this.uppercasePBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -464,7 +394,7 @@ namespace ChampionsDeck
             this.lowercasePBox.BackColor = System.Drawing.Color.Transparent;
             this.lowercasePBox.Image = global::ChampionsDeck.Properties.Resources.No;
             this.lowercasePBox.ImageRotate = 0F;
-            this.lowercasePBox.Location = new System.Drawing.Point(1085, 405);
+            this.lowercasePBox.Location = new System.Drawing.Point(1062, 413);
             this.lowercasePBox.Name = "lowercasePBox";
             this.lowercasePBox.Size = new System.Drawing.Size(25, 25);
             this.lowercasePBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -477,7 +407,7 @@ namespace ChampionsDeck
             this.scharacterPBox.BackColor = System.Drawing.Color.Transparent;
             this.scharacterPBox.Image = global::ChampionsDeck.Properties.Resources.No;
             this.scharacterPBox.ImageRotate = 0F;
-            this.scharacterPBox.Location = new System.Drawing.Point(1085, 436);
+            this.scharacterPBox.Location = new System.Drawing.Point(1062, 444);
             this.scharacterPBox.Name = "scharacterPBox";
             this.scharacterPBox.Size = new System.Drawing.Size(25, 25);
             this.scharacterPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -712,7 +642,7 @@ namespace ChampionsDeck
             this.Signinlbl.BackColor = System.Drawing.Color.White;
             this.Signinlbl.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Signinlbl.ForeColor = System.Drawing.Color.Black;
-            this.Signinlbl.Location = new System.Drawing.Point(850, 594);
+            this.Signinlbl.Location = new System.Drawing.Point(849, 611);
             this.Signinlbl.Name = "Signinlbl";
             this.Signinlbl.Size = new System.Drawing.Size(260, 23);
             this.Signinlbl.TabIndex = 36;
@@ -727,7 +657,7 @@ namespace ChampionsDeck
             this.SigninBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SigninBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SigninBtn.ForeColor = System.Drawing.Color.Navy;
-            this.SigninBtn.Location = new System.Drawing.Point(905, 620);
+            this.SigninBtn.Location = new System.Drawing.Point(904, 634);
             this.SigninBtn.Name = "SigninBtn";
             this.SigninBtn.Size = new System.Drawing.Size(179, 41);
             this.SigninBtn.TabIndex = 38;
@@ -743,7 +673,7 @@ namespace ChampionsDeck
             this.termsConditionsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.termsConditionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.termsConditionsBtn.ForeColor = System.Drawing.Color.Navy;
-            this.termsConditionsBtn.Location = new System.Drawing.Point(1006, 467);
+            this.termsConditionsBtn.Location = new System.Drawing.Point(1005, 484);
             this.termsConditionsBtn.Name = "termsConditionsBtn";
             this.termsConditionsBtn.Size = new System.Drawing.Size(182, 32);
             this.termsConditionsBtn.TabIndex = 40;
@@ -755,12 +685,47 @@ namespace ChampionsDeck
             // 
             this.termsConditionsCBox.AutoSize = true;
             this.termsConditionsCBox.BackColor = System.Drawing.Color.Transparent;
-            this.termsConditionsCBox.Location = new System.Drawing.Point(744, 474);
+            this.termsConditionsCBox.Location = new System.Drawing.Point(743, 491);
             this.termsConditionsCBox.Name = "termsConditionsCBox";
             this.termsConditionsCBox.Size = new System.Drawing.Size(256, 21);
             this.termsConditionsCBox.TabIndex = 39;
             this.termsConditionsCBox.Text = "I agree to the Terms and Conditions";
             this.termsConditionsCBox.UseVisualStyleBackColor = false;
+            // 
+            // showPassCBox
+            // 
+            this.showPassCBox.AutoSize = true;
+            this.showPassCBox.BackColor = System.Drawing.Color.Transparent;
+            this.showPassCBox.Location = new System.Drawing.Point(871, 354);
+            this.showPassCBox.Name = "showPassCBox";
+            this.showPassCBox.Size = new System.Drawing.Size(129, 21);
+            this.showPassCBox.TabIndex = 41;
+            this.showPassCBox.Text = "Show Password";
+            this.showPassCBox.UseVisualStyleBackColor = false;
+            this.showPassCBox.CheckedChanged += new System.EventHandler(this.showPassCBox_CheckedChanged);
+            // 
+            // showRPassCBox
+            // 
+            this.showRPassCBox.AutoSize = true;
+            this.showRPassCBox.BackColor = System.Drawing.Color.Transparent;
+            this.showRPassCBox.Location = new System.Drawing.Point(853, 436);
+            this.showRPassCBox.Name = "showRPassCBox";
+            this.showRPassCBox.Size = new System.Drawing.Size(152, 21);
+            this.showRPassCBox.TabIndex = 42;
+            this.showRPassCBox.Text = "Show Re-Password";
+            this.showRPassCBox.UseVisualStyleBackColor = false;
+            this.showRPassCBox.CheckedChanged += new System.EventHandler(this.showRPassCBox_CheckedChanged);
+            // 
+            // countrylbl
+            // 
+            this.countrylbl.AutoSize = true;
+            this.countrylbl.BackColor = System.Drawing.Color.White;
+            this.countrylbl.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countrylbl.Location = new System.Drawing.Point(1121, 201);
+            this.countrylbl.Name = "countrylbl";
+            this.countrylbl.Size = new System.Drawing.Size(90, 23);
+            this.countrylbl.TabIndex = 8;
+            this.countrylbl.Text = "Country";
             // 
             // Registration
             // 
@@ -769,6 +734,10 @@ namespace ChampionsDeck
             this.BackgroundImage = global::ChampionsDeck.Properties.Resources.signup4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1382, 703);
+            this.Controls.Add(this.characterPBox);
+            this.Controls.Add(this.characterlbl);
+            this.Controls.Add(this.showRPassCBox);
+            this.Controls.Add(this.showPassCBox);
             this.Controls.Add(this.termsConditionsBtn);
             this.Controls.Add(this.termsConditionsCBox);
             this.Controls.Add(this.SigninBtn);
@@ -778,12 +747,10 @@ namespace ChampionsDeck
             this.Controls.Add(this.lowercasePBox);
             this.Controls.Add(this.uppercasePBox);
             this.Controls.Add(this.numberPBox);
-            this.Controls.Add(this.characterPBox);
             this.Controls.Add(this.labelheading);
             this.Controls.Add(this.numberlbl);
             this.Controls.Add(this.uppercaselbl);
             this.Controls.Add(this.lowercaselbl);
-            this.Controls.Add(this.characterlbl);
             this.Controls.Add(this.scharacterlbl);
             this.Controls.Add(this.guna2PictureBox5);
             this.Controls.Add(this.guna2PictureBox4);
@@ -792,19 +759,15 @@ namespace ChampionsDeck
             this.Controls.Add(this.userNameTBox);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.CreateABtn);
-            this.Controls.Add(this.repasswordlbl);
             this.Controls.Add(this.RpasswordTBox);
-            this.Controls.Add(this.passwordlbl);
             this.Controls.Add(this.passwordTBox);
             this.Controls.Add(this.countrylbl);
-            this.Controls.Add(this.emaillbl);
             this.Controls.Add(this.emailTBox);
-            this.Controls.Add(this.preferredglbl);
             this.Controls.Add(this.preferredGamesTBox);
             this.Controls.Add(this.signuplbl);
-            this.Controls.Add(this.usernamelbl);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.Registration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -825,16 +788,10 @@ namespace ChampionsDeck
         #endregion
 
         private Guna.UI2.WinForms.Guna2TextBox userNameTBox;
-        private System.Windows.Forms.Label usernamelbl;
         private System.Windows.Forms.Label signuplbl;
-        private System.Windows.Forms.Label preferredglbl;
         private Guna.UI2.WinForms.Guna2TextBox preferredGamesTBox;
-        private System.Windows.Forms.Label emaillbl;
         private Guna.UI2.WinForms.Guna2TextBox emailTBox;
-        private System.Windows.Forms.Label countrylbl;
-        private System.Windows.Forms.Label repasswordlbl;
         private Guna.UI2.WinForms.Guna2TextBox RpasswordTBox;
-        private System.Windows.Forms.Label passwordlbl;
         private Guna.UI2.WinForms.Guna2TextBox passwordTBox;
         private Guna.UI2.WinForms.Guna2Button CreateABtn;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
@@ -858,5 +815,8 @@ namespace ChampionsDeck
         private System.Windows.Forms.Button SigninBtn;
         private System.Windows.Forms.Button termsConditionsBtn;
         private System.Windows.Forms.CheckBox termsConditionsCBox;
+        private System.Windows.Forms.CheckBox showPassCBox;
+        private System.Windows.Forms.CheckBox showRPassCBox;
+        private System.Windows.Forms.Label countrylbl;
     }
 }

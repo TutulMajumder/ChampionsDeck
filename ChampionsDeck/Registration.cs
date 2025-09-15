@@ -67,21 +67,24 @@ namespace ChampionsDeck
 
         private void Registration_Load(object sender, EventArgs e)
         {
-            /*if (string.IsNullOrEmpty(passwordTBox.Text))
+            if (string.IsNullOrEmpty(passwordTBox.Text))
             {
                 HideValidationElements();
-            }*/
+            }
+
+            passwordTBox.UseSystemPasswordChar = true;
+            RpasswordTBox.UseSystemPasswordChar = true;
         }
 
         private void passwordTBox_TextChanged(object sender, EventArgs e)
         {
-         //ValidatePassword();
+         ValidatePassword();
         }
 
 
         private bool ValidatePassword()
         {
-            /*
+            
             string password = passwordTBox.Text;
 
             if (string.IsNullOrEmpty(password))
@@ -99,14 +102,14 @@ namespace ChampionsDeck
             bool hasValidLength = password.Length >= 8 && password.Length < 16;
 
             // Update UI based on validation
-            UpdateValidationUI(characterlbl, characterPBox, isValidLength);
+            UpdateValidationUI(characterlbl, characterPBox, hasValidLength);
             UpdateValidationUI(numberlbl, numberPBox, hasNumber);
             UpdateValidationUI(uppercaselbl, uppercasePBox, hasUppercase);
             UpdateValidationUI(lowercaselbl, lowercasePBox, hasLowercase);
             UpdateValidationUI(scharacterlbl, scharacterPBox, hasSymbol);
 
             return hasUppercase && hasLowercase && hasSymbol && hasValidLength && hasNumber;
-            */
+            
             return true;
         }
 
@@ -132,6 +135,7 @@ namespace ChampionsDeck
                 }
             }
         }
+       
         
         
 
@@ -225,6 +229,8 @@ namespace ChampionsDeck
             {
                 string fromEmail = "tutulm.364.aiub@gmail.com"; 
                 string fromPassword = "paynvdatrmxhbrvk";
+
+                
                 string subject = "Your OTP for Registration";
                 string body = $"Here is your registration verification code : {otp}";
 
@@ -261,6 +267,32 @@ namespace ChampionsDeck
             SignUpTermsConditions terms_Conditions = new SignUpTermsConditions();
             terms_Conditions.Show();
             this.Hide();
+        }
+
+        private void showPassCBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(showPassCBox.Checked)
+            {
+                passwordTBox.UseSystemPasswordChar = false;
+            }
+
+            else
+            {
+                passwordTBox.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void showRPassCBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showRPassCBox.Checked)
+            {
+                RpasswordTBox.UseSystemPasswordChar = false;
+            }
+
+            else
+            {
+                RpasswordTBox.UseSystemPasswordChar = true;
+            }
         }
     }
 }

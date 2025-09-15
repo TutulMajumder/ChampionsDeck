@@ -1,7 +1,7 @@
 ﻿
 namespace ChampionsDeck
 {
-    partial class FogotPasswordOtp
+    partial class ForgotPasswordOtp
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,7 @@ namespace ChampionsDeck
             this.votpBtn = new Guna.UI2.WinForms.Guna2Button();
             this.VOtplbl = new System.Windows.Forms.Label();
             this.otpTBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // otpTBox6
@@ -58,6 +59,7 @@ namespace ChampionsDeck
             this.otpTBox6.SelectedText = "";
             this.otpTBox6.Size = new System.Drawing.Size(81, 54);
             this.otpTBox6.TabIndex = 36;
+            this.otpTBox6.TextChanged += new System.EventHandler(this.otpTBox6_TextChanged);
             // 
             // otpTBox5
             // 
@@ -78,6 +80,7 @@ namespace ChampionsDeck
             this.otpTBox5.SelectedText = "";
             this.otpTBox5.Size = new System.Drawing.Size(81, 54);
             this.otpTBox5.TabIndex = 35;
+            this.otpTBox5.TextChanged += new System.EventHandler(this.otpTBox6_TextChanged);
             // 
             // otpTBox4
             // 
@@ -98,6 +101,7 @@ namespace ChampionsDeck
             this.otpTBox4.SelectedText = "";
             this.otpTBox4.Size = new System.Drawing.Size(81, 54);
             this.otpTBox4.TabIndex = 34;
+            this.otpTBox4.TextChanged += new System.EventHandler(this.otpTBox6_TextChanged);
             // 
             // otpTBox3
             // 
@@ -118,6 +122,7 @@ namespace ChampionsDeck
             this.otpTBox3.SelectedText = "";
             this.otpTBox3.Size = new System.Drawing.Size(81, 54);
             this.otpTBox3.TabIndex = 33;
+            this.otpTBox3.TextChanged += new System.EventHandler(this.otpTBox6_TextChanged);
             // 
             // otpTBox2
             // 
@@ -138,6 +143,7 @@ namespace ChampionsDeck
             this.otpTBox2.SelectedText = "";
             this.otpTBox2.Size = new System.Drawing.Size(81, 54);
             this.otpTBox2.TabIndex = 32;
+            this.otpTBox2.TextChanged += new System.EventHandler(this.otpTBox6_TextChanged);
             // 
             // votpBtn
             // 
@@ -157,6 +163,7 @@ namespace ChampionsDeck
             this.votpBtn.Size = new System.Drawing.Size(284, 57);
             this.votpBtn.TabIndex = 31;
             this.votpBtn.Text = "Verify Otp";
+            this.votpBtn.Click += new System.EventHandler(this.votpBtn_Click);
             // 
             // VOtplbl
             // 
@@ -188,13 +195,29 @@ namespace ChampionsDeck
             this.otpTBox1.SelectedText = "";
             this.otpTBox1.Size = new System.Drawing.Size(81, 54);
             this.otpTBox1.TabIndex = 29;
+            this.otpTBox1.TextChanged += new System.EventHandler(this.otpTBox6_TextChanged);
             // 
-            // FogotPasswordOtp
+            // CancelBtn
+            // 
+            this.CancelBtn.BackColor = System.Drawing.Color.Navy;
+            this.CancelBtn.FlatAppearance.BorderSize = 0;
+            this.CancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBtn.ForeColor = System.Drawing.Color.White;
+            this.CancelBtn.Location = new System.Drawing.Point(1230, 12);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(140, 50);
+            this.CancelBtn.TabIndex = 130;
+            this.CancelBtn.Text = "Back";
+            this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            // 
+            // ForgotPasswordOtp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1382, 703);
+            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.otpTBox6);
             this.Controls.Add(this.otpTBox5);
             this.Controls.Add(this.otpTBox4);
@@ -203,7 +226,9 @@ namespace ChampionsDeck
             this.Controls.Add(this.votpBtn);
             this.Controls.Add(this.VOtplbl);
             this.Controls.Add(this.otpTBox1);
-            this.Name = "FogotPasswordOtp";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "ForgotPasswordOtp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FogotPasswordOtp";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,5 +245,6 @@ namespace ChampionsDeck
         private Guna.UI2.WinForms.Guna2Button votpBtn;
         private System.Windows.Forms.Label VOtplbl;
         private Guna.UI2.WinForms.Guna2TextBox otpTBox1;
+        private System.Windows.Forms.Button CancelBtn;
     }
 }

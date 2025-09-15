@@ -21,5 +21,12 @@ namespace ChampionsDeck
         {
 
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Registration registration = new Registration();
+            registration.Show();
+            this.Hide();
+        }
     }
 }
