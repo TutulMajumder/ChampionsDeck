@@ -127,7 +127,7 @@ Explore the core features and workflows of Champions Deck through the following 
    ```
 
 2. **Import the database schema:**  
-   Use SSMS to execute the SQL queries from [`query.txt`](query.txt) or `/db/schema.sql` in your SQL Server instance.
+   Use SSMS to execute the SQL queries from [`query.txt`](query.txt) in your SQL Server instance.
 
 3. **Open the project in Visual Studio.**
 
