@@ -71,21 +71,21 @@ Explore the core features and workflows of Champions Deck through the following 
 
 - **Login:**  
   The login screen provides secure access for all user roles, ensuring only authorized users can enter the system.  
-  ![Login Screen](screenshots/image.png)
+  ![Login Screen](Screenshots/image.png)
 
 - **Registration:**  
   The registration form allows new viewers to sign up by entering their details, selecting a preferred game, and agreeing to terms and conditions.  
-  ![Registration Screen](screenshots/image-1.png)
+  ![Registration Screen](Screenshots/image-1.png)
 
 - **Email Verification:**  
   After registration, viewers verify their email to activate their account, enhancing security and authenticity.  
-  ![Email Verification](screenshots/image-4.png)
+  ![Email Verification](Screenshots/image-4.png)
 
 - **Change Password:**  
   Users can initiate a password change process, including email verification and OTP confirmation for secure password updates.  
-  ![Email Verification Step 1](screenshots/image-3.png)  
-  ![Email Verification Step 2](screenshots/image-2.png)  
-  ![Verification Success](screenshots/image-5.png)
+  ![Email Verification Step 1](Screenshots/image-3.png)  
+  ![Email Verification Step 2](Screenshots/image-2.png)  
+  ![Verification Success](Screenshots/image-5.png)
 
 ---
 
@@ -93,12 +93,12 @@ Explore the core features and workflows of Champions Deck through the following 
 
 - **Browse Tournaments:**  
   Viewers can explore ongoing and upcoming tournaments, viewing details and schedules in a user-friendly interface.  
-  ![Tournament List](screenshots/image-6.png)
+  ![Tournament List](Screenshots/image-6.png)
 
 - **Propose & Approve Tournaments:**  
   Tournament Managers can propose new tournaments, which are then reviewed and approved by Admins to ensure quality and compliance.  
-  ![Propose Tournament](screenshots/image-8.png)  
-  ![Approve Tournament](screenshots/image-9.png)
+  ![Propose Tournament](Screenshots/image-8.png)  
+  ![Approve Tournament](Screenshots/image-9.png)
 
 ---
 
@@ -106,15 +106,15 @@ Explore the core features and workflows of Champions Deck through the following 
 
 - **Game Management:**  
   Game Managers can add, update, or remove games available for tournaments, maintaining an up-to-date game roster.  
-  ![Game Management](screenshots/image-7.png)
+  ![Game Management](Screenshots/image-7.png)
 
 - **Team Management:**  
   Tournament Managers handle team registrations and details, ensuring teams are properly organized for events.  
-  ![Team Management](screenshots/image-10.png)
+  ![Team Management](Screenshots/image-10.png)
 
 - **Match Scheduling & Score Updates:**  
   Schedule matches and update scorecards to reflect real-time results and progression throughout the tournament.  
-  ![Match Scheduling](screenshots/image-11.png)
+  ![Match Scheduling](Screenshots/image-11.png)
 
 ---
 
@@ -122,23 +122,23 @@ Explore the core features and workflows of Champions Deck through the following 
 
 - **Admin Overview:**  
   The admin dashboard provides a comprehensive overview of system activity and user management.  
-  ![Admin Overview](screenshots/image-12.png)
+  ![Admin Overview](Screenshots/image-12.png)
 
 - **User Management:**  
   Admins can manage user accounts, assign roles, and oversee permissions for all participants.  
-  ![User Management](screenshots/image-13.png)
+  ![User Management](Screenshots/image-13.png)
 
 - **Tournament Approval:**  
   Admins review and approve tournament proposals submitted by Tournament Managers.  
-  ![Tournament Approval](screenshots/image-14.png)
+  ![Tournament Approval](Screenshots/image-14.png)
 
 - **System Settings:**  
   Configure system-wide settings to tailor the application to organizational needs.  
-  ![System Settings](screenshots/image-15.png)
+  ![System Settings](Screenshots/image-15.png)
 
 - **Audit Logs:**  
   Track system activity and changes for transparency and accountability.  
-  ![Audit Logs](screenshots/image-16.png)
+  ![Audit Logs](Screenshots/image-16.png)
 
 ---
 
